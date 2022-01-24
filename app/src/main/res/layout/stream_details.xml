@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StreamDetails">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/lightBlueBg">
+
+        <Button
+            android:id="@+id/sdBackButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back_butt_black" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/sdAvatarImg"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/sdBackButt"
+            android:src="@drawable/default_avatar" />
+
+        <TextView
+            android:id="@+id/sdFullnameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/sdAvatarImg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/sdAvatarImg"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/content_placeholder"
+            android:textColor="@color/darkText" />
+
+        <TextView
+            android:id="@+id/sdUsernameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/sdFullnameTxt"
+            android:layout_alignBottom="@+id/sdAvatarImg"
+            android:layout_marginBottom="5dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/content_placeholder"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/sdOptionsButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignBottom="@+id/sdUsernameTxt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:text="@string/content_placeholder"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBar"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/sdStreamTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:autoLink="web"
+                    android:text="@string/content_placeholder"
+                    android:textColor="@color/darkText" />
+
+                <ImageView
+                    android:id="@+id/sdStreamImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_below="@+id/sdStreamTxt"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                     android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/sdPlayingTimeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/sdStreamImg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/stream_details_default_duration"
+                    android:textAlignment="center"
+                    android:textColor="@color/whiteText"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/sdPlayButt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignTop="@+id/sdStreamImg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="120dp"
+                    android:background="@drawable/play_butt"
+                    android:visibility="invisible" />
+
+                <RelativeLayout
+                    android:id="@+id/sdButtonsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/sdStreamImg"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/whiteBg">
+
+                    <LinearLayout
+                        android:id="@+id/sdLine1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#d6d6d6"
+                        android:orientation="horizontal" />
+
+                    <Button
+                        android:id="@+id/sdLikeButt"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/sdLine1"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/like_butt_small" />
+
+                    <TextView
+                        android:id="@+id/sdLikesTxt"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/sdLikeButt"
+                        android:layout_alignBottom="@+id/sdLikeButt"
+                        android:layout_toEndOf="@+id/sdLikeButt"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/stats_default_value"
+                        android:textColor="@color/darkText"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/sdCommentsButt"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignTop="@+id/sdLikesTxt"
+                        android:layout_marginStart="51dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/sdLikeButt"
+                        android:background="@drawable/comment_butt_small" />
+
+                    <TextView
+                        android:id="@+id/sdCommentsTxt"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/sdCommentsButt"
+                        android:layout_alignBottom="@+id/sdCommentsButt"
+                        android:layout_toEndOf="@+id/sdCommentsButt"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/stats_default_value"
+                        android:textColor="@color/darkText"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/sdShareButt"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignTop="@+id/sdCommentsTxt"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/sdCommentsTxt"
+                        android:background="@drawable/share_butt_small"
+                        android:textAllCaps="false" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

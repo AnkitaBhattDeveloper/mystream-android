@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.domain.mystream.utils.NonSwipeableViewPager
+        android:id="@+id/ah_content_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ah_bottom_navigation_rv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ah_bottom_navigation_rv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/bottom_navigation_clickable_area"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="5dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        tools:itemcount="5"
+        tools:listitem="@layout/item_bottom_navigation_tab" />
+</RelativeLayout>

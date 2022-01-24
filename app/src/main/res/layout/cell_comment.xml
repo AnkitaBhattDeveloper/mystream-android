@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ccommAvatarimg"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/default_avatar" />
+
+    <TextView
+        android:id="@+id/ccommFullnameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ccommAvatarimg"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/ccommAvatarimg"
+        android:text="@string/content_placeholder"
+        android:textColor="@color/darkText"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ccommCommTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ccommFullnameTxt"
+        android:layout_alignStart="@+id/ccommFullnameTxt"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded_corners_comment"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/content_placeholder"
+        android:textColor="@color/darkText"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/ccommDateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_below="@+id/ccommCommTxt"
+        android:layout_alignStart="@+id/ccommCommTxt"
+        android:layout_alignBottom="@+id/ccommAvatarimg"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:text="@string/content_placeholder"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/ccommOptionsButt"
+        android:layout_width="44dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/ccommCommTxt"
+        android:layout_alignTop="@+id/ccommDateTxt"
+        android:layout_alignEnd="@+id/ccommCommTxt"
+        android:background="@android:color/transparent"
+        android:text="@string/content_placeholder" />
+</RelativeLayout>

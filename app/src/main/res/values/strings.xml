@@ -1,0 +1,212 @@
+<resources>
+
+    <!-- IMPORTANT: REPLACE THE NAME OF THE APP BELOW WITH YOUR OWN ONE -->
+    <string name="app_name">MetaBots</string>
+
+
+    <!-- IMPORTANT: REPLACE THE STRING BELOW WITH YOUR OWN INTERSTITIAL UNIT ID YOU'LL GET FROM http://apps.admob.com -->
+    <string name="ADMOB_INTERSTITIAL_UNIT_ID">ca-app-pub-3940256099942544/1033173712</string>
+
+
+    <!-- IMPORTANT: REPLACE THE STRING BELOW WITH YOUR OWN FACEBOOK APP ID YOU'LL GET ON https://developers.facebook.com/apps/ -->
+    <string name="facebook_app_id">2268272983220294</string>
+
+    <!--IMPORTANT: REPLACE "478517440140" WITH YOUR OWN GCM SENDER ID -->
+    <string name="gcm_sender_id">478517440140</string>
+
+    <!-- Common -->
+    <string name="loading_dialog_please_wait">Please wait…</string>
+    <string name="user_liked_stream">%s liked your Stream: \'%s\'</string>
+    <string name="stream_share_on">Share on…</string>
+    <string name="stream_share_formatted">%s on # %s</string>
+    <string name="username_formatted_with_date">\@%s • %s</string>
+    <string name="username_formatted">\@%s</string>
+    <string name="content_placeholder">•••</string>
+    <string name="not_available">N/A</string>
+    <string name="select_source">SELECT SOURCE</string>
+    <string name="take_picture_option">Take a picture</string>
+    <string name="pick_from_gallery_option">Pick from Gallery</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="ok_button">Ok</string>
+    <string name="select_image">Select Image</string>
+    <string name="loading_message">loading…</string>
+
+    <!-- Intro -->
+    <string name="intro_description">Create a free account and start enjoying the app</string>
+    <string name="intro_sign_up_button">Sign Up</string>
+    <string name="intro_sign_in_with_facebook">Sign in with Facebook</string>
+    <string name="intro_log_in_button">Log in</string>
+    <string name="intro_already_have_an_account">Already have an account?</string>
+
+    <!-- Sign Up -->
+    <string name="signup_title">Sign up to %s</string>
+    <string name="signup_username_hint">Choose a username</string>
+    <string name="signup_password_hint">Type a password</string>
+    <string name="signup_email_hint">Type your email address</string>
+    <string name="signup_fullname_hint">Type your full name</string>
+    <string name="signup_invitation_code">Type your invitation code</string>
+    <string name="signup_sign_up_button">Sign Up</string>
+    <string name="signup_accept_terms">By Signing up, you agree to our</string>
+    <string name="signup_terms_of_use">Terms Of Use</string>
+    <string name="signup_input_validation_error">You must fill all the fields to Sign Up!</string>
+
+    <!-- Login -->
+    <string name="login_title">Log in to %s</string>
+    <string name="login_username_hint">username</string>
+    <string name="login_password_hint">password</string>
+    <string name="login_button">Log in</string>
+    <string name="login_forgot_password_button">Forgot password? Reset it</string>
+    <string name="login_sign_up_with_email">Sign up with Email</string>
+    <string name="login_input_validation_error">Type the valid email address you\'ve used to register on this app</string>
+    <string name="login_reset_password_success">We\'ve sent you an email to reset your password!</string>
+
+    <!-- Bottom navigation menu -->
+    <string name="bottom_menu_streams_tab">Streams</string>
+    <string name="bottom_menu_search_tab">Search</string>
+    <string name="bottom_menu_following_tab">Following</string>
+    <string name="bottom_menu_account_tab">Account</string>
+    <string name="bottom_menu_messaging_tab">Messages</string>
+
+    <!-- Streams -->
+    <string name="streams_photo_button">Photo</string>
+    <string name="streams_video_button">Video</string>
+    <string name="streams_audio_button">Audio</string>
+    <string name="streams_new_post_description">What do you want to stream?</string>
+
+    <!-- Search -->
+    <string name="search_hint">Search…</string>
+    <string name="search_validation_error">You need to type something!</string>
+
+    <!-- Following -->
+    <string name="following_screen_title">Following</string>
+    <string name="following_empty_screen_description">Streams of people you follow will appear here</string>
+
+    <!-- Account -->
+    <string name="account_followers_button">followers</string>
+    <string name="account_following_button">following</string>
+    <string name="account_delete_stream_title">Are you sure you want to delete this Stream?</string>
+    <string name="account_delete_option">Delete</string>
+    <string name="account_my_stream_section_title">My Stream</string>
+
+    <!-- Messages -->
+    <string name="messages_sent_message_prefix">You wrote:</string>
+    <string name="messages_you_blocked_error">Sorry, @%s has blocked you, you can\'t chat with this user.</string>
+    <string name="messages_screen_title">Messages</string>
+    <string name="messages_empty_screen_description">You have no active Messages</string>
+
+    <!-- Activity -->
+    <string name="activity_screen_title">Activity</string>
+
+    <!-- Add stream -->
+    <string name="add_stream_screen_title">Add Stream</string>
+    <string name="add_stream_post_button">Post</string>
+    <string name="add_stream_recording">RECORDING…</string>
+    <string name="add_stream_record_default_duration">0:0</string>
+    <string name="add_stream_stop_recording">STOP</string>
+    <string name="add_stream_description">What do you want to post?</string>
+    <string name="add_stream_add_to_your_stream">Add to your Stream</string>
+    <string name="add_stream_photo_button">Photo</string>
+    <string name="add_stream_video_button">Video</string>
+    <string name="add_stream_audio_button">Audio</string>
+    <string name="add_stream_sticker_button">Sticker</string>
+
+    <!-- Comments -->
+    <string name="comments_screen_title">Comments</string>
+    <string name="comments_write_something">Write something…</string>
+    <string name="comments_validation_error">You must type something!</string>
+    <string name="comments_notification_commented">%s commented on your Stream: \'%s\'</string>
+    <string name="comments_select_source">SELECT SOURCE</string>
+    <string name="comments_report_option">Report comment</string>
+    <string name="comments_copy_option">Copy</string>
+    <string name="comments_report_title">Are you sure you want to report this commment to the Admin?</string>
+    <string name="comments_report_button">Report</string>
+    <string name="comments_report_success">Thanks for reporting this comment! We\'ll check it out within 24h.</string>
+    <string name="comments_copy_success">Copied Text</string>
+
+    <!-- Edit Profile -->
+    <string name="edit_profile_screen_title">Edit Profile</string>
+    <string name="edit_profile_tap_to_change_avatar">Tap to change avatar</string>
+    <string name="edit_profile_tap_to_change_cover_image">Tap to change cover image</string>
+    <string name="edit_profile_username_title">Username</string>
+    <string name="edit_profile_username_hint">your username</string>
+    <string name="edit_profile_full_name_title">Full Name</string>
+    <string name="edit_profile_full_name_hint">your full name</string>
+    <string name="edit_profile_email_title">Email (for password recovery)</string>
+    <string name="edit_profile_email_hint">your email address</string>
+    <string name="edit_profile_about_you_title">Something about you</string>
+    <string name="edit_profile_about_you_hint">something about you…</string>
+    <string name="edit_profile_update_button">Update Profile</string>
+    <string name="edit_profile_input_validation_error">You must type a Username, a Full Name and an email address (needed only for password recovery)</string>
+    <string name="edit_profile_update_success">Your profile has been updated!</string>
+
+    <!-- Follow -->
+    <string name="follow_screen_title">Followers</string>
+
+    <!-- Inbox -->
+    <string name="inbox_type_your_message">type your message</string>
+    <string name="inbox_send_button">Send</string>
+    <string name="inbox_send_picture_error">You must type something or send a picture!</string>
+    <string name="inbox_unblock_user">Unblock User</string>
+    <string name="inbox_block_user">Block User</string>
+    <string name="inbox_select_option">Select option</string>
+    <string name="inbox_delete_chat">Delete Chat</string>
+    <string name="inbox_blocked_user">You\'ve blocked this User, you will no longer get Chat messages from @%s</string>
+    <string name="inbox_unblocked_user">You\'ve unblocked @%s</string>
+    <string name="inbox_delete_chat_alert_title">Are you sure you want to delete this Chat? @%s will not be able to see these messages either.</string>
+    <string name="inbox_tap_picture_to_close">Tap the picture to close</string>
+    <string name="inbox_sending_loading">Sending…</string>
+
+    <!-- User Profile -->
+    <string name="user_profile_followers_count">%s\nfollowers</string>
+    <string name="user_profile_following_count">%s\nfollowing</string>
+    <string name="user_profile_following_button">Following</string>
+    <string name="user_profile_follow_button">Follow</string>
+    <string name="user_profile_started_follow">%s started to follow you!</string>
+    <string name="user_profile_report_alert_title">Are you sure you want to report @%s to the Admin?</string>
+    <string name="user_profile_report_in_progress">Reporting User…</string>
+    <string name="user_profile_report_success">Thanks for reporting %s. We\'ll check it out within 24h.</string>
+
+    <!-- Settings -->
+    <string name="settings_screen_title">Settings</string>
+    <string-array name="settings_options">
+        <item>Edit Profile</item> <!-- 0 -->
+        <item>Activity</item> <!-- 1 -->
+        <item>Terms of Use</item> <!-- 2 -->
+        <item>Version</item> <!-- 3 -->
+        <item>Like on Facebook</item> <!-- 4 -->
+        <item>Follow on Twitter</item> <!-- 5 -->
+        <item>Rate on the Play Store</item> <!-- 6 -->
+        <item>Logout</item> <!-- 7 -->
+    </string-array>
+    <string name="settings_version_formatted">Version %s</string>
+    <string name="settings_logout_alert_title">Are you sure you want to logout?</string>
+    <string name="settings_logout_button">Logout</string>
+    <string name="settings_logout_loading">Logging out…</string>
+    <string name="stats_screen_title">Stream Activity</string>
+    <string name="stats_views_title">Views</string>
+    <string name="stats_view_description">Times people saw this Stream</string>
+    <string name="stats_likes_title">Likes</string>
+    <string name="stats_likes_description">Times people liked this Stream</string>
+    <string name="stats_profile_clicks_title">Profile clicks</string>
+    <string name="stats_profile_clicks_description">Times people clicked your avatar on this Stream</string>
+    <string name="stats_comments_title">Comments</string>
+    <string name="stats_comments_description">Times people commented this Stream</string>
+    <string name="stats_shares_title">Shares</string>
+    <string name="stats_shares_description">Times people shared this Stream</string>
+    <string name="stats_default_value">0</string>
+
+    <!-- Stickers -->
+    <string name="stickers_add_a_sticker">Add a Sticker</string>
+
+    <!-- Terms of Use -->
+    <string name="terms_screen_title">Terms of Use</string>
+    <string name="stream_details_default_duration">00:00</string>
+    <string name="stream_details_report_option">Report Stream</string>
+    <string name="stream_details_report_details">Report @%s</string>
+    <string name="stream_details_delete_option">(X) Delete Stream</string>
+    <string name="stream_details_report_alert_title">Are you sure you want to report this Stream to the Admin?</string>
+    <string name="stream_details_report_loading">Reporting Stream…</string>
+    <string name="stream_details_report_success">Thanks for reporting this Stream, we\'ll check it out withint 24 hours!</string>
+    <string name="stream_details_report_user_alert_title">Are you sure you want to report @%s to the Admin?</string>
+    <string name="user_profile_stream_section_title">Stream</string>
+</resources>

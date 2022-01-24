@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/asRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="false"
+    tools:context=".AddStream">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/lightBlueBg">
+
+        <Button
+            android:id="@+id/asCancelButt"
+            android:layout_width="60dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:text="@string/cancel_button"
+            android:textAllCaps="false"
+            android:textColor="@color/main_color"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/asPostButt"
+            android:layout_width="60dp"
+            android:layout_height="44dp"
+            android:layout_alignBaseline="@+id/asCancelButt"
+            android:layout_alignBottom="@+id/asCancelButt"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:text="@string/add_stream_post_button"
+            android:textAllCaps="false"
+            android:textColor="@color/main_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/asTitleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/add_stream_screen_title"
+            android:textAlignment="center"
+            android:textColor="@color/darkText"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBar"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/asAvatarimg"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/default_avatar" />
+
+                <TextView
+                    android:id="@+id/asFullnameTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/asAvatarimg"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@+id/asAvatarimg"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/content_placeholder"
+                    android:textColor="@color/darkText"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/asStreamTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/asAvatarimg"
+                    android:layout_alignStart="@+id/asAvatarimg"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/add_stream_description"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/darkText"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/asStreamImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_below="@+id/asStreamTxt"
+                    android:layout_alignStart="@+id/asStreamTxt"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitCenter" />
+
+                <Button
+                    android:id="@+id/asRemoveImageButt"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/asStreamTxt"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/dismiss_butt_small"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/asPlayButt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/play_butt" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/asKeyboardToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lightBlueBg">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/add_stream_add_to_your_stream"
+            android:textColor="@color/darkText"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/textView7"
+            app:srcCompat="@drawable/photo_icon" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            app:srcCompat="@drawable/video_icon" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/imageView11"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/imageView11"
+            app:srcCompat="@drawable/audio_icon" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/imageView12"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/imageView12"
+            app:srcCompat="@drawable/sticker_icon" />
+
+        <Button
+            android:id="@+id/asAddStreamButt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/asRecordAudioLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5000dp"
+        android:background="@color/whiteBg">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="@string/add_stream_recording"
+            android:textColor="@color/darkText"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/asRecordDurationTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView8"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/add_stream_record_default_duration"
+            android:textColor="@color/darkText"
+            android:textSize="16sp" />
+
+        <WebView
+            android:id="@+id/asRecordingWebView"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:layout_below="@+id/asRecordDurationTxt"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:foregroundGravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/asStopRecordingButt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/asRecordingWebView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:backgroundTint="@color/main_color"
+            android:text="@string/add_stream_stop_recording"
+            android:textColor="@color/whiteText"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

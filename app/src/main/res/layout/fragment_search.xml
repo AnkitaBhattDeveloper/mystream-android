@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightBlueBg"
+    tools:context=".SearchFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_color">
+
+        <EditText
+            android:id="@+id/sSearchTxt"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_toStartOf="@+id/sCancelButt"
+            android:background="@drawable/searchbar_bkg"
+            android:ems="10"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColorHint="#fff"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/sCancelButt"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:text="@string/cancel_button"
+            android:textAllCaps="false"
+            android:textColor="@color/whiteText"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/search_swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBar">
+
+        <ListView
+            android:id="@+id/sStreamsListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tabBar"
+            android:layout_below="@+id/topBar"
+            android:layout_alignParentStart="true"
+            android:background="@color/whiteBg"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+            android:visibility="invisible" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

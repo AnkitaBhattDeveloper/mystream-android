@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="main_color">#8560a8</color>
+    <color name="main_color_light">#B39DDB</color>
+
+    <color name="selected_bottom_menu">@color/main_color</color>
+    <color name="unelected_bottom_menu">#555</color>
+
+    <!-- Text colors -->
+    <color name="darkText">#333</color>
+    <color name="whiteText">#fff</color>
+    <color name="grayText">#555</color>
+    <color name="inputHint">#f1f1f1</color>
+
+    <!-- Background colors -->
+    <color name="whiteBg">#fff</color>
+    <color name="lightBg">#d0d0d0</color>
+    <color name="lightBlueBg">#eef5fb</color>
+    <color name="blackBg">#000</color>
+    <color name="voilet">#402663</color>
+    <color name="blue">#452F9A</color>
+
+
+
+
+
+</resources>

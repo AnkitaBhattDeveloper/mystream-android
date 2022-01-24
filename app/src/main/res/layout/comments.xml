@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Comments">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/lightBlueBg">
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/comments_screen_title"
+            android:textColor="@color/darkText"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/commBackButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back_butt_black" />
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/commCommentLayout"
+        android:layout_below="@+id/commStreamTxt"
+        android:layout_marginTop="10dp">
+
+        <ListView
+            android:id="@+id/commListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/commCommentLayout"
+            android:layout_below="@+id/commStreamTxt"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/commFullnameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBar"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/content_placeholder"
+        android:textColor="@color/darkText"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/commStreamTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commFullnameTxt"
+        android:layout_alignStart="@+id/commFullnameTxt"
+        android:layout_marginRight="10dp"
+        android:text="@string/content_placeholder"
+        android:textColor="@color/darkText"
+        android:textSize="10sp" />
+
+    <RelativeLayout
+        android:id="@+id/commCommentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lightBlueBg">
+
+        <View
+            android:id="@+id/commLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/lightBg"
+            android:orientation="horizontal" />
+
+        <EditText
+            android:id="@+id/commCommentTxt"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toStartOf="@+id/commSendButt"
+            android:backgroundTint="@color/main_color"
+            android:ems="10"
+            android:hint="@string/comments_write_something"
+            android:imeOptions="normal"
+            android:inputType="textMultiLine"
+            android:textColor="@color/darkText"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/commSendButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/send_butt" />
+    </RelativeLayout>
+</RelativeLayout>

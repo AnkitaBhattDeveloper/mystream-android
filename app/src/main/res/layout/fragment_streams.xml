@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightBlueBg"
+    tools:context=".StreamsFragment">
+
+    <!-- TAB BAR -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_color">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            ads:srcCompat="@drawable/logo2" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hAddStreamLayout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@+id/topBar"
+        android:paddingBottom="5dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/whiteBg">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/hcurrUserAvatarImg"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/default_avatar" />
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/hcurrUserAvatarImg"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/lightBg"
+            android:orientation="horizontal" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+
+            ads:srcCompat="@drawable/photo_icon" />
+
+        <Button
+            android:id="@+id/hAddPhotoButt"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@+id/imageView5"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:text="@string/streams_photo_button"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@+id/hAddVideoButt"
+            android:layout_alignParentBottom="true"
+            ads:srcCompat="@drawable/video_icon" />
+
+        <Button
+            android:id="@+id/hAddVideoButt"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:text="@string/streams_video_button"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@+id/hAddAudioButt"
+            android:layout_alignParentBottom="true"
+            ads:srcCompat="@drawable/audio_icon" />
+
+        <Button
+            android:id="@+id/hAddAudioButt"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:text="@string/streams_audio_button"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/hAddStreamButt"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_above="@+id/line"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/hcurrUserAvatarImg"
+            android:background="@android:color/transparent"
+            android:text="@string/streams_new_post_description"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/darkText"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/streams_swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/hAddStreamLayout"
+        android:layout_marginTop="10dp">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/stream_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tabBar"
+            android:layout_below="@+id/hAddStreamLayout"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/whiteBg"
+            android:scrollbars="vertical" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

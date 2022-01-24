@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/receiverCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/rAvatarImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/rUsernameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/rMessTxt"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@+id/rAvatarImg"
+            android:text="@string/loading_message"
+            android:textAlignment="textEnd"
+            android:textColor="@color/darkText"
+            android:textSize="12sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/rMessTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rAvatarImg"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_corner_receiver"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/loading_message"
+            android:textAlignment="textStart"
+            android:textColor="@color/darkText"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/rImage"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignStart="@+id/rMessTxt"
+            android:layout_alignTop="@+id/rMessTxt"
+            android:layout_toStartOf="@+id/rDateTxt"
+            android:background="@drawable/rounded_corner_receiver"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/rDateTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rUsernameTxt"
+            android:layout_alignEnd="@+id/rUsernameTxt"
+            android:layout_marginTop="5dp"
+            android:text="@string/loading_message"
+            android:textColor="@color/darkText"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/senderCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/sAvatarImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/sUsernameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/sAvatarImg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/sAvatarImg"
+            android:text="@string/loading_message"
+            android:textColor="@color/main_color"
+            android:textSize="12sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/sMessTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sAvatarImg"
+            android:layout_alignStart="@+id/sAvatarImg"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rounded_corner_sender_cell"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/loading_message"
+            android:textColor="@color/whiteText"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/sDateTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sUsernameTxt"
+            android:layout_alignStart="@+id/sUsernameTxt"
+            android:layout_marginTop="5dp"
+            android:text="@string/loading_message"
+            android:textColor="@color/darkText"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/sImage"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignTop="@+id/sMessTxt"
+            android:layout_alignEnd="@+id/sMessTxt"
+            android:layout_toEndOf="@+id/sDateTxt"
+            android:background="@drawable/rounded_corner_sender_cell"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/logo" />
+    </RelativeLayout>
+</RelativeLayout>

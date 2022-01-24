@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardElevation="5dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/eventCell"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/csAvatarImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/default_avatar" />
+
+        <TextView
+            android:id="@+id/csFullnameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/csAvatarImg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/csAvatarImg"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/content_placeholder"
+            android:textColor="@color/darkText"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/csUsernameTimeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/csFullnameTxt"
+            android:layout_alignBottom="@+id/csAvatarImg"
+            android:layout_marginBottom="8dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/content_placeholder"
+            android:textColor="@color/grayText"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/csStreamImg"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_below="@+id/csUsernameTimeTxt"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/csStreamTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/csStreamImg"
+            android:layout_margin="10dp"
+
+            android:maxLines="4"
+            android:text="@string/content_placeholder"
+            android:textColor="@color/darkText"
+            android:textSize="12sp" />
+
+
+
+        <Button
+            android:id="@+id/csLikeButt"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/csStreamTxt"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/like_butt_small" />
+
+        <TextView
+            android:id="@+id/csLikesTxt"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/csLikeButt"
+            android:layout_alignBottom="@+id/csLikeButt"
+            android:layout_toEndOf="@+id/csLikeButt"
+            android:gravity="center_vertical"
+            android:text="@string/stats_default_value"
+            android:textColor="@color/darkText"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/csCommentsButt"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/csLikesTxt"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/csLikesTxt"
+            android:background="@drawable/comment_butt_small" />
+
+        <TextView
+            android:id="@+id/csCommentsTxt"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/csCommentsButt"
+            android:layout_alignBottom="@+id/csCommentsButt"
+            android:layout_toEndOf="@+id/csCommentsButt"
+            android:gravity="center_vertical"
+            android:text="@string/stats_default_value"
+            android:textColor="@color/darkText"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/csShareButt"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/csCommentsTxt"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/csCommentsTxt"
+            android:background="@drawable/share_butt_small" />
+
+        <Button
+            android:id="@+id/csDeleteButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/delete_butt"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/csStatsButt"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/csShareButt"
+            android:layout_alignEnd="@+id/csDeleteButt"
+            android:background="@drawable/stats_butt"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

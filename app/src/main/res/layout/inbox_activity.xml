@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inbox_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".InboxActivity">
+
+    <RelativeLayout
+        android:id="@+id/inTopView"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_color">
+
+        <TextView
+            android:id="@+id/inUsernameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="@string/content_placeholder"
+            android:textAlignment="center"
+            android:textColor="@color/whiteText"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:id="@+id/inBackButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back_butt"
+            android:textAllCaps="false"
+            android:textColor="@color/whiteText"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/inOptionsButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignTop="@+id/inBackButt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:text="@string/content_placeholder"
+            android:textAllCaps="false"
+            android:textColor="@color/whiteText"
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/inBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_color">
+
+        <EditText
+            android:id="@+id/inMessageTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/inUploadPicButt"
+            android:background="@color/main_color"
+            android:backgroundTint="@color/main_color"
+            android:hint="@string/inbox_type_your_message"
+            android:imeOptions="normal"
+            android:inputType="textMultiLine"
+            android:paddingLeft="10dp"
+            android:textColor="@color/whiteText"
+            android:textColorHint="@color/inputHint"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/inSendButt"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/inMessageTxt"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:text="@string/inbox_send_button"
+            android:textAllCaps="false"
+            android:textColor="@color/whiteText"
+            android:textSize="14sp"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:id="@+id/inUploadPicButt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/inSendButt"
+            android:background="@drawable/send_image_butt" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/inInboxListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/inBottomLayout"
+        android:layout_below="@+id/inTopView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp" />
+
+    <ImageView
+        android:id="@+id/inImagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/inBottomLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5000dp"
+        android:background="@color/blackBg"
+        android:scaleType="fitCenter"
+        ads:srcCompat="@drawable/logo" />
+</RelativeLayout>

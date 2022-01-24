@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/asAddStreamLayout"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/lightBlueBg">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/asDismissAddStreamLayoutButt"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:background="@color/lightBg"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/add_stream_add_to_your_stream"
+            android:textColor="@color/darkText"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/asDismissAddStreamLayoutButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/dismiss_butt_black" />
+
+        <ImageView
+            android:id="@+id/pIconImg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/line"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/photo_icon" />
+
+        <Button
+            android:id="@+id/asAddPhotoButt"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/line"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/pIconImg"
+            android:background="@android:color/transparent"
+            android:text="@string/add_stream_photo_button"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/asAddPhotoButt"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:background="@color/lightBg"
+            android:orientation="horizontal" />
+
+        <ImageView
+            android:id="@+id/pVideoImg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/line2"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/video_icon" />
+
+        <Button
+            android:id="@+id/asAddVideoButt"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/pVideoImg"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/pVideoImg"
+            android:background="@android:color/transparent"
+            android:text="@string/add_stream_video_button"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/asAddVideoButt"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:background="@color/lightBg"
+            android:orientation="horizontal" />
+
+        <ImageView
+            android:id="@+id/pAudioImg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/line3"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/audio_icon" />
+
+        <Button
+            android:id="@+id/asAddAudioButt"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/pAudioImg"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/pAudioImg"
+            android:background="@android:color/transparent"
+            android:text="@string/add_stream_audio_button"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:id="@+id/line4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/asAddAudioButt"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:background="@color/lightBg"
+            android:orientation="horizontal" />
+
+        <ImageView
+            android:id="@+id/pStickerImg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/line4"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/sticker_icon" />
+
+        <Button
+            android:id="@+id/asAddStickerButt"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/pStickerImg"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/pStickerImg"
+            android:background="@android:color/transparent"
+            android:text="@string/add_stream_sticker_button"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="11sp" />
+    </RelativeLayout>
+</RelativeLayout>
